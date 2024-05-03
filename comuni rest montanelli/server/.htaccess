@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /comuni%20rest%20montanelli/server/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ api.php?url=$1 [QSA,L]
